@@ -48,4 +48,13 @@
 
                     <p>
                         The goal here is to come up with a site that tests the bounds of what people will believe.
-                        Submit a fake study (details coming soon), share it on social media, and see what happens.
+                        Submit a fake study, share it on social media, and see what happens.
+
+                    <p>
+                        In order to submit your own fake study, please
+                        <a href="https://github.com/snoyberg/totallylegitimatestudies/new/master/studies">#
+                            <b>open a pull request on Github#
+                        \. Mark sure to add a file ending with a <tt>.md</tt> file extension.
+
+                    <p>
+                        <a href="https://github.com/snoyberg/totallylegitimatestudies/new/master/studies" .btn .btn-primary">Add a study now
