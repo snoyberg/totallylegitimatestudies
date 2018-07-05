@@ -7,3 +7,6 @@
 /robots.txt RobotsR GET
 
 / HomeR GET
+/studies StudiesR GET
+/study/#Text StudyR GET
+/study/#Text/full StudyFullR GET

@@ -1,0 +1,9 @@
+<div .container>
+  <div .row>
+    <h1>#{title}
+    <p>
+        Congratulations! Unlike most people on the internet, you actually tried to read the study.
+        This study doesn't exist. This whole website is fake. Have fun trolling your friends!
+
+    <p>
+        <a href=@{StudyR key}>Return to fake study summary page

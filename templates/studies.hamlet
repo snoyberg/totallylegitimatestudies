@@ -1,0 +1,7 @@
+<div .container>
+  <div .row>
+    <h1>Studies
+    <ul>
+      $forall (slug, study) <- mapToList studies
+        <li>
+          <a href=@{StudyR slug}>#{studyTitle study}

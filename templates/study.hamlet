@@ -1,0 +1,6 @@
+<div .container>
+  <div .row>
+    #{studyBody study}
+    <hr>
+    <p>
+      <a href=@{StudyFullR key}>Read the full text

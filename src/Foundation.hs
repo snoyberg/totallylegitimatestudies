@@ -23,6 +23,7 @@ data App = App
     { appSettings    :: AppSettings
     , appStatic      :: Static -- ^ Settings for static file serving.
     , appLogger      :: Logger
+    , appStudies     :: Studies
     }
 
 -- This is where we define all of the routes in our application. For a full

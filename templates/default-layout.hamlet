@@ -13,6 +13,8 @@
             <ul .nav.navbar-nav>
                 <li :Just HomeR == mcurrentRoute:.active>
                     <a href="@{HomeR}">Home
+                <li :Just StudiesR == mcurrentRoute:.active>
+                    <a href="@{StudiesR}">Studies
 
 <!-- Page Contents -->
 
