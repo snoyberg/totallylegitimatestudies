@@ -70,6 +70,23 @@ executables:
     when:
     - condition: flag(library-only)
       buildable: false
+  uploader:
+    main: uploader.hs
+    source-dirs: app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - amazonka-core
+    - amazonka-s3
+    - amazonka
+    - http-client
+    - http-conduit
+    when:
+    - condition: flag(library-only)
+      buildable: false
+    other-modules: []
 
 # Test suite
 tests:
