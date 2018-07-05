@@ -15,14 +15,11 @@ module Application
     -- * for DevelMain
     , getApplicationRepl
     , shutdownApp
-    -- * for GHCI
-    , handler
     ) where
 
 import Control.Monad.Logger                 (liftLoc)
 import Import
 import Language.Haskell.TH.Syntax           (qLocation)
-import Network.HTTP.Client.TLS              (getGlobalManager)
 import Network.Wai (Middleware)
 import Network.Wai.Handler.Warp             (Settings, defaultSettings,
                                              defaultShouldDisplayException,
@@ -39,7 +36,6 @@ import System.Log.FastLogger                (defaultBufSize, newStdoutLoggerSet,
 -- Don't forget to add new modules to your cabal file!
 import Handler.Common
 import Handler.Home
-import Handler.Comment
 
 -- This line actually creates our YesodDispatch instance. It is the second half
 -- of the call to mkYesodData which occurs in Foundation.hs. Please see the
@@ -52,9 +48,7 @@ mkYesodDispatch "App" resourcesApp
 -- migrations handled by Yesod.
 makeFoundation :: AppSettings -> IO App
 makeFoundation appSettings = do
-    -- Some basic initializations: HTTP connection manager, logger, and static
-    -- subsite.
-    appHttpManager <- getGlobalManager
+    -- Some basic initializations: logger and static subsite.
     appLogger <- newStdoutLoggerSet defaultBufSize >>= makeYesodLogger
     appStatic <-
         (if appMutableStatic appSettings then staticDevel else static)
@@ -151,12 +145,3 @@ getApplicationRepl = do
 
 shutdownApp :: App -> IO ()
 shutdownApp _ = return ()
-
-
----------------------------------------------
--- Functions for use in development with GHCi
----------------------------------------------
-
--- | Run a handler
-handler :: Handler a -> IO a
-handler h = getAppSettings >>= makeFoundation >>= flip unsafeHandler h
