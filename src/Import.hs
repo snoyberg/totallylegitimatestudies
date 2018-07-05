@@ -5,8 +5,9 @@ module Import
 
 import Foundation            as Import
 import Import.NoFoundation   as Import
+import qualified RIO.Map     as Map
 
 getStudy :: Text -> Handler Study
 getStudy key = do
   studies <- appStudies <$> getYesod
-  maybe notFound pure $ lookup key studies
+  maybe notFound pure $ Map.lookup key studies

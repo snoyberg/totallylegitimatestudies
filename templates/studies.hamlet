@@ -2,6 +2,6 @@
   <div .row>
     <h1>Studies
     <ul>
-      $forall (slug, study) <- mapToList studies
+      $forall (slug, study) <- Map.toList studies
         <li>
           <a href=@{StudyR slug}>#{studyTitle study}

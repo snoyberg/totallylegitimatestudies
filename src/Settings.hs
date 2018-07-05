@@ -10,10 +10,13 @@
 -- declared in the Foundation.hs file.
 module Settings where
 
-import ClassyPrelude.Yesod
+import RIO
+import Yesod.Core
+import Yesod.Static
+import Data.Default.Class (def)
 import qualified Control.Exception as Exception
 import Data.Aeson                  (Result (..), fromJSON, withObject, (.!=),
-                                    (.:?))
+                                    (.:?), FromJSON (..))
 import Data.FileEmbed              (embedFile)
 import Data.Yaml                   (decodeEither')
 import Language.Haskell.TH.Syntax  (Exp, Name, Q)

@@ -6,6 +6,7 @@
 module Handler.Studies where
 
 import Import
+import qualified RIO.Map as Map
 
 getStudiesR :: Handler Html
 getStudiesR = do

@@ -2,7 +2,12 @@
 {-# LANGUAGE OverloadedStrings #-}
 module Studies where
 
-import ClassyPrelude.Yesod
+import RIO
+import Conduit
+import qualified RIO.Text as T
+import qualified RIO.Map as Map
+import qualified RIO.List as List
+import Yesod.Core (Html, preEscapedToMarkup)
 import CMarkGFM
 import System.FilePath (takeBaseName)
 import Text.HTML.DOM (parseSTChunks)
@@ -24,7 +29,7 @@ loadStudies dir =
       liftIO
     $ runConduitRes
     $ sourceDirectory dir
-   .| filterC (".md" `isSuffixOf`)
+   .| filterC (".md" `List.isSuffixOf`)
    .| foldMapMC go
 
 go :: MonadIO m => FilePath -> m Studies
@@ -42,7 +47,7 @@ go fp = do
       [] -> err "No h1 heading found"
       _:_:_ -> err "Multiple h1 headings found"
       [h1] -> pure $ mconcat $ h1 $// content
-  return $ singletonMap (pack $ takeBaseName fp) Study
+  return $ Map.singleton (T.pack $ takeBaseName fp) Study
     { studyTitle = title
     , studyBody = preEscapedToMarkup body
     }
