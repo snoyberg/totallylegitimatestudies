@@ -15,6 +15,7 @@ import Text.XML.Cursor
 
 data Study = Study
   { studyTitle :: !Text
+  , studyDesc :: !Text
   , studyBody :: !Html
   -- ^ includes the title as well
   }
@@ -49,5 +50,6 @@ go fp = do
       [h1] -> pure $ mconcat $ h1 $// content
   return $ Map.singleton (T.pack $ takeBaseName fp) Study
     { studyTitle = title
+    , studyDesc = T.take 157 (T.unwords $ concat $ map T.words $ cursor $// content) <> "..."
     , studyBody = preEscapedToMarkup body
     }
