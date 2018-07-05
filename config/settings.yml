@@ -25,5 +25,5 @@ ip-from-header: "_env:YESOD_IP_FROM_HEADER:false"
 # mutable-static: false
 # skip-combining: false
 
-copyright: Insert copyright statement here
+copyright: Copyright 1934-2056, All Rights Reserved (except they aren't, this is totally open source)
 #analytics: UA-YOURCODE

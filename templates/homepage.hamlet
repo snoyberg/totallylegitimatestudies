@@ -1,78 +1,51 @@
 <div .masthead>
     <div .container>
         <div .row>
-            <h1 .header>
-                Yesod—a modern framework for blazing fast websites
+            <h1 .header>#{title}
             <h2>
-                Fast, stable & spiced with great community
-            <a href="http://www.yesodweb.com/book/" .btn.btn-info.btn-lg>
-                Read the Book
+                The most reliable source for real studies
 
 <div .container>
-    <!-- Starting
-        ================================================== -->
     <div .bs-docs-section>
         <div .row>
             <div .col-lg-12>
                 <div .page-header>
-                    <h1 #start>Starting
+                    <h1 #our-mission>Our Mission
 
                     <p>
-                        Now that you have a working project you should use the
-                        <a href=http://www.yesodweb.com/book/>Yesod book</a> to learn more.
-                    <p>
-                        You can also use this scaffolded site to explore some concepts, and best practices.
-
-                    <ul .list-group>
-
-                        <li .list-group-item>
-                            A Widget's Html, Css and Javascript are separated in three files with the
-                            <tt>.hamlet</tt>, <tt>.lucius</tt> and <tt>.julius</tt> extensions.
+                        Deliver top quality value out of markov chain generated official studies.
+                        We avoid fake news by thoroughly vetting all studies with an algorithm.
+                        The algorithm is kept in a lockbox for maximum security.
 
     <hr>
 
-    <!-- Forms
-        ================================================== -->
     <div .bs-docs-section>
         <div .row>
             <div .col-lg-12>
                 <div .page-header>
-                    <h1 #forms>Forms
+                    <h1 #our-team>Our Team
 
                     <p>
-                        This is an example of a form. Read the
-                        <a href="http://www.yesodweb.com/book/forms">Forms chapter</a> #
-                        on the yesod book to learn more about them.
+                        Our team is made up of world renowned researchers in all possible fields.
+                        There is literally not a single field we don't cover.
+                        Everything here is super duper legit.
 
     <hr>
 
-    <!-- JSON
-        ================================================== -->
     <div .bs-docs-section>
         <div .row>
             <div .col-lg-12>
                 <div .page-header>
-                    <h1 #json>JSON
+                    <h1 #wait-a-second>Wait a second
 
                     <p>
-                        Yesod has JSON support baked-in.
-                        The form below makes an AJAX request with Javascript,
-                        then updates the page with your submission.
-                        (see <tt>Handler/Comment.hs</tt>, <tt>templates/homepage.julius</tt>,
-                        and <tt>Handler/Home.hs</tt> for the implementation).
+                        Do you think this website seems fishy?
+                        Congratulations, this is a super fishy website.
+                        You've done better than 95% (at least) of people on the internet.
+                        This site is fake.
+                        Like, super, totally fake.
+                        We'll reject content that isn't fake.
 
-    <hr>
-
-    <!-- Testing
-       ================================================== -->
-    <div .bs-docs-section>
-       <div .row>
-           <div .col-lg-12>
-               <div .page-header>
-                   <h1 #test>Testing
-
-                   <p>
-                       And last but not least, Testing. In <tt>test/Spec.hs</tt> you will find a #
-                       test suite that performs tests on this page.
-                   <p>
-                       You can run your tests by doing: <code>stack test</code>
+                    <p>
+                        The goal here is to come up with a site that tests the bounds of what people will believe.
+                        Submit a fake study (details coming soon), share it on social media, and see what happens.

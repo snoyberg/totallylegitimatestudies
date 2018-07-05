@@ -23,5 +23,6 @@ data FileForm = FileForm
 getHomeR :: Handler Html
 getHomeR = do
     defaultLayout $ do
-        setTitle "Welcome To Yesod!"
+        let title = "Totally Legitimate Studies"
+        setTitle title
         $(widgetFile "homepage")
