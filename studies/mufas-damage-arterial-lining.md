@@ -49,3 +49,7 @@ None
 ## Team
 
 Researchers for the Canola Oil industry.
+
+## More information
+
+This is some more information that no one will read.
